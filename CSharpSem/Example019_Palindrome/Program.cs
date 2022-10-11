@@ -19,6 +19,9 @@ bool FlipNumber(int num1)
     int num2 = digit5 * 10000 + digit4 * 1000 + digit3 * 100 + digit2 * 10 + digit1;
     return num2 == num1;
 }
-
+if (number>=10000 && number <100000)
+{
 if (FlipNumber(number)) Console.WriteLine($"{number} -> да");
 else Console.WriteLine($"{number} -> нет");
+}
+else System.Console.WriteLine("Введено не пятизначное число");
