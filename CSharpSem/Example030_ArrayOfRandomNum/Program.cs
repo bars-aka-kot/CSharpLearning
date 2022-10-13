@@ -7,7 +7,7 @@ void FillArray(int[] arr)
     for (int i = 0; i < arr.Length; i++)
     {   
         Random rnd = new Random();
-        arr[i] = rnd.Next(0, 2);
+        arr[i] = rnd.Next(0, 10);
     }
 }
 
@@ -20,7 +20,7 @@ void PrintArray(int[] arr)
 }
 
 
-int[] array = new int[8];
+int[] array = new int[20];
 
 FillArray(array);
 PrintArray(array);
