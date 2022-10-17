@@ -4,9 +4,9 @@
 
 void FillArray(int[] arr)
 {
+    Random rnd = new Random();
     for (int i = 0; i < arr.Length; i++)
     {   
-        Random rnd = new Random();
         arr[i] = rnd.Next(0, 10);
     }
 }
