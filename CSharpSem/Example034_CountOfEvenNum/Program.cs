@@ -32,7 +32,7 @@ int CountEventNum(int[] arr)
     int countArr = default;
     for (int i=0;i<arr.Length;i++)
     {
-        if (arr[i] % 2==1) countArr++;
+        if (arr[i] % 2 != 1) countArr++;
     }
     return countArr;
 }
