@@ -45,8 +45,8 @@ void SearchInArray(int[,] matrix, int row, int column)
 
 int[,] array = CreateMatrixRndInt(5, 4, -10, 10);
 PrintMatrix(array);
-Console.Write("Введите координаты элемента в формате (строка, столбец): ");
+Console.Write("Введите координаты элемента в формате (строка столбец): ");
 string str = Console.ReadLine();
-int[] strArray = str.Split(", ").Select(int.Parse).ToArray();
+int[] strArray = str.Split(" ").Select(int.Parse).ToArray();
 
 SearchInArray(array, strArray[0], strArray[1]);
