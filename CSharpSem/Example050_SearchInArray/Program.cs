@@ -38,8 +38,9 @@ void PrintMatrix(int[,] matrix)
 
 void SearchInArray(int[,] matrix, int row, int column)
 {
-    if (row<matrix.GetLength(0) && column<matrix.GetLength(0))
-        Console.WriteLine($"Элемент ({row}, {column}) -> {matrix[row,column]}");
+    if (row < 0 && column < 0) Console.WriteLine("Введены отрицательные значения");
+    else if (row < matrix.GetLength(0) && column < matrix.GetLength(0))
+        Console.WriteLine($"Элемент ({row}, {column}) -> {matrix[row, column]}");
     else Console.WriteLine($"({row}, {column}) -> такого элемента в массиве нет");
 }
 
