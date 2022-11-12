@@ -57,8 +57,8 @@ int[,] Product2Matrix(int[,] matrix1, int[,] matrix2)
     return newMatrix;
 }
 
-int[] matrix1RowsColumns = InputNumbers("Введите число строк и столбцов первой матрицы: ");
-int[] matrix2RowsColumns = InputNumbers("Введите число строк и столбцов второй матрицы: ");
+int[] matrix1RowsColumns = InputNumbers("Введите число строк и столбцов первой матрицы в формате 'строка столбец': ");
+int[] matrix2RowsColumns = InputNumbers("Введите число строк и столбцов второй матрицы в формате 'строка столбец': ");
 
 int[,] matrixFirst = CreateMatrixRndInt(matrix1RowsColumns[0], matrix1RowsColumns[1], 1, 10);
 int[,] matrixSecond = CreateMatrixRndInt(matrix2RowsColumns[0], matrix2RowsColumns[1], 1, 10);
