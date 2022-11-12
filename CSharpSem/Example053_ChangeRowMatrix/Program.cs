@@ -42,7 +42,17 @@ int[,] ChangeRow(int[,] matrix)
     return matrix;
 }
 
-int[,] matrix = CreateMatrixRndInt(3, 4, -10, 10);
+int InputNumbers(string input)
+{
+  Console.Write(input);
+  int output = Convert.ToInt32(Console.ReadLine());
+  return output;
+}
+
+int rows = InputNumbers("Введите количество строк: ");
+int columns = InputNumbers("Введите количество столбцов: ");
+
+int[,] matrix = CreateMatrixRndInt(rows, columns, -10, 10);
 PrintMatrix(matrix);
 Console.WriteLine();
 int[,] matrixNew = ChangeRow(matrix);

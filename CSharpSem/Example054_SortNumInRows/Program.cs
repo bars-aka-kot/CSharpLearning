@@ -31,10 +31,6 @@ void PrintMatrix(int[,] matrix)
     Console.WriteLine();
 }
 
-// 1 4 7 2          ->      7 4 2 1
-// 5 9 2 3          ->      9 5 3 2
-// 8 4 2 4          ->      8 4 4 2
-
 int[,] SortNumInRows(int[,] matrix)
 {
     int min = 0;
@@ -55,11 +51,16 @@ int[,] SortNumInRows(int[,] matrix)
     }
     return matrix;
 }
-Console.Write("Введите количество строк: ");
-int rows = Convert.ToInt32(Console.ReadLine());
 
-Console.Write("Введите количество столбцов: ");
-int columns = Convert.ToInt32(Console.ReadLine());
+int InputNumbers(string input)
+{
+  Console.Write(input);
+  int output = Convert.ToInt32(Console.ReadLine());
+  return output;
+}
+
+int rows = InputNumbers("Введите количество строк: ");
+int columns = InputNumbers("Введите количество столбцов: ");
 
 int[,] matrix = CreateMatrixRndInt(rows, columns, 1, 10);
 

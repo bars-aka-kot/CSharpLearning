@@ -62,11 +62,15 @@ double[] AverageColumn(int[,] matrix)
     return array;
 }
 
-Console.Write("Введите количество строк: ");
-int rows = Convert.ToInt32(Console.ReadLine());
+int InputNumbers(string input)
+{
+  Console.Write(input);
+  int output = Convert.ToInt32(Console.ReadLine());
+  return output;
+}
 
-Console.Write("Введите количество столбцов: ");
-int columns = Convert.ToInt32(Console.ReadLine());
+int rows = InputNumbers("Введите количество строк: ");
+int columns = InputNumbers("Введите количество столбцов: ");
 
 int[,] arr = CreateMatrixRndInt(rows, columns, 1, 10);
 
