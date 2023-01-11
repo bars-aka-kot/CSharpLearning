@@ -4,9 +4,9 @@
 // array (произвольный, количество произвольно)
 // m = 3
 
-int size = 100000;
+int size = 1000000;
 
-int m = 300;
+int m = 50000;
 
 int[] array = Enumerable.Range(1, size).Select(item => Random.Shared.Next(10)).ToArray();
 
@@ -30,6 +30,9 @@ sw.Stop();
 Console.WriteLine($"time = {sw.ElapsedMilliseconds}");
 Console.WriteLine($"Способ 1 = {max}");
 
+Stopwatch sw1 = new();
+sw1.Start();
+
 int max1 = 0;
 for (int j = 0; j < m; j++)
     max1 += array[j];
@@ -41,4 +44,6 @@ for (int i = 1; i < array.Length - m; i++)
         max1 = t1;
 }
 
-Console.WriteLine(($"Способ 1 = {max1}"));
+sw1.Stop();
+Console.WriteLine($"time = {sw1.ElapsedMilliseconds}");
+Console.WriteLine(($"Способ 2 = {max1}"));
